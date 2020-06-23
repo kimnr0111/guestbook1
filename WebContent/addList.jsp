@@ -18,8 +18,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="./add.jsp" method="get">
-		<table border="1">
+	<form action="./add.jsp" method="post">
+		<table border="1" width="500px">
 			
 			<tr>
 				<td>이름</td>
@@ -28,7 +28,7 @@
 				<td><input type="text" name="password"></td>
 			</tr>
 			<tr>
-				<td colspan="4"><textarea name="contents" rows="5" cols="40"></textarea></td>
+				<td colspan="4"><textarea name="contents" rows="5" cols="40" style="resize: none; width: 480px;"></textarea></td>
 			</tr>
 			<tr>
 				<td colspan="4"><button>확인</button></td>
@@ -37,7 +37,7 @@
 		<br>
 	</form>
 	<%for(GuestVo guestVo : guestList) {%>
-	<table border="1">
+	<table border="1" width="500px">
 		<tr>
 			<td><%=guestVo.getNo()%></td>
 			<td><%=guestVo.getName()%></td>
@@ -45,7 +45,7 @@
 			<td><a href="./deleteForm.jsp?no=<%=guestVo.getNo()%>">삭제</a></td>
 		</tr>
 		<tr>
-			<td colspan="4"><%=guestVo.getContent()%></td>
+			<td colspan="4" style="white-space: pre-line;"><%=guestVo.getContent()%></td>
 		</tr>
 	</table><br>
 	<%} %>

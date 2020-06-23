@@ -15,9 +15,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="./delete.jsp" method="get">
-	비밀번호:<input type="text" name="password">
-	<input type="text" name="no" value=<%=No %>>
+	<form action="./delete.jsp" method="post">
+	비밀번호:<input type="password" name="password">
+	<input type="hidden" name="no" value=<%=No %>>
 	<button type="submit">확인</button><br>
 	<a href="./addList.jsp">메인으로 돌아가기</a>
 	</form>
