@@ -121,11 +121,6 @@ public class GuestDao {
 		
 	}
 	
-	/*
-	 delete from guestbook
-where password like '1111';
-	 */
-	
 	public void guestDelete(String password, int no) {
 		getConnection();
 		
