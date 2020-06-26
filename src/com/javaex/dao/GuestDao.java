@@ -121,7 +121,7 @@ public class GuestDao {
 		
 	}
 	
-	public void guestDelete(String password, int no) {
+	public void guestDelete(GuestVo guestVo) {
 		getConnection();
 		
 		try {
@@ -131,8 +131,8 @@ public class GuestDao {
 			query += " and no = ? ";
 			pstmt = conn.prepareStatement(query);
 			
-			pstmt.setString(1, password);
-			pstmt.setInt(2, no);
+			pstmt.setString(1, guestVo.getPassword());
+			pstmt.setInt(2, guestVo.getNo());
 			
 			pstmt.executeUpdate();
 			
